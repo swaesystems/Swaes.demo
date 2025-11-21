@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Swae Systems — 24/7 AI Concierge for Clinics</title>
-    <meta name="description" content="Your front desk sleeps. Ours doesn't. Swae Systems books patients 24/7, answers pricing questions, and follows up every missed lead — in your clinic’s exact voice." />
+    <title>Swae Systems — 24/7 AI Concierge for Med Spas</title>
+    <meta name="description" content="Your front desk sleeps. Ours doesn't. Swae Systems books med spa patients 24/7, answers pricing questions, and follows up every missed lead — in your brand’s exact voice." />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -717,33 +717,31 @@
             max-width:480px;
         }
 
-        /* mobile menu overlay */
+        /* MOBILE MENU – LUXURY DROPDOWN, NOT FULL SCREEN */
         .mobile-menu-overlay{
             position:fixed;
-            inset:0;
+            top:4.5rem; /* just under nav */
+            right:0;
+            left:0;
             display:none;
-            align-items:flex-start;
-            justify-content:center;
-            padding:1.25rem;
-            background:
-                radial-gradient(circle at 10% 0%, rgba(214,178,106,0.18) 0%, rgba(0,0,0,0.96) 55%),
-                radial-gradient(circle at 90% 100%, rgba(255,255,255,0.09) 0%, rgba(0,0,0,1) 55%);
-            backdrop-filter:blur(18px) saturate(180%);
-            -webkit-backdrop-filter:blur(18px) saturate(180%);
-            z-index:9999;
+            justify-content:flex-end;
+            padding:0 1.25rem;
+            background:transparent; /* no full-screen dark layer */
+            z-index:998;
         }
         .mobile-menu-panel{
             width:100%;
-            max-width:360px;
-            margin-top:.75rem;
-            background:rgba(10,10,10,0.82);
-            border-radius:24px;
+            max-width:320px;
+            background:rgba(5,5,5,0.92);
+            border-radius:20px;
             border:1px solid rgba(214,178,106,0.7);
             box-shadow:
                 0 32px 120px rgba(0,0,0,0.9),
-                0 0 90px rgba(214,178,106,0.3);
-            padding:1.25rem 1.1rem 1.9rem;
+                0 0 90px rgba(214,178,106,0.35);
+            padding:1.1rem 1.1rem 1.7rem;
             color:var(--text-main);
+            backdrop-filter:blur(18px) saturate(180%);
+            -webkit-backdrop-filter:blur(18px) saturate(180%);
         }
 
         /* floating demo pill */
@@ -826,7 +824,7 @@
                         SWAE SYSTEMS
                     </div>
                     <div style="color:var(--gold); font-size:.6rem; font-weight:500; line-height:1.2;">
-                        24/7 AI Concierge
+                        24/7 AI Concierge for Med Spas
                     </div>
                 </div>
             </div>
@@ -855,17 +853,21 @@
             </h1>
 
             <div class="hero-sub">
-                24/7 AI that books appointments, answers pricing questions, and follows up every missed lead — in your clinic’s exact voice.
+                24/7 AI that books med spa appointments, answers pricing questions, and follows up every missed lead — in your exact brand voice.
                 English + Spanish. HIPAA-aware intake. Zero attitude.
             </div>
 
             <div class="cta-row">
-                <a class="btn-primary" href="#demo">See It Work</a>
-                <a class="btn-secondary" href="#contact">Get Early Access</a>
+                <a class="btn-primary" href="https://swaesystems.github.io/system-By-Swae/" target="_blank" rel="noopener noreferrer">
+                    Try the Live Demo →
+                </a>
+                <a class="btn-secondary" href="#contact">
+                    Book a 15-min Walkthrough
+                </a>
             </div>
 
             <div class="hero-note">
-                We’re quietly onboarding 3 new clinics this month.
+                We’re quietly onboarding 3 new med spas this month.
                 After that, new clinics go to waitlist.
             </div>
 
@@ -959,7 +961,7 @@
 
                     <div style="color:var(--text-dim); font-size:.8rem; line-height:1.5; max-width:420px; margin-bottom:1.5rem;">
                         A new client asks “How much is Botox and can I come tomorrow?”
-                        Our system replies in <span style="color:var(--gold);">your clinic’s tone</span>,
+                        Our system replies in <span style="color:var(--gold);">your med spa’s tone</span>,
                         gives realistic pricing ranges, offers open times,
                         and collects name / number / service preference for you.
                     </div>
@@ -1023,7 +1025,7 @@
                     </div>
                     <div class="compare-points">
                         <div><b>Speed:</b> Replies in &lt;5 seconds, 24/7.</div>
-                        <div><b>Tone:</b> Speaks exactly like your clinic (not robotic).</div>
+                        <div><b>Tone:</b> Speaks exactly like your med spa (not robotic).</div>
                         <div><b>Booking:</b> Offers real times, collects name / number / service.</div>
                         <div><b>Follow-up:</b> Chases no-shows so you don’t have to.</div>
                         <div><b>Bilingual:</b> English + Spanish.</div>
@@ -1151,7 +1153,7 @@
             <div class="section-header" style="margin-bottom:2rem;">
                 <div class="eyebrow">LIMITED ONBOARDING</div>
                 <h2 class="section-title brand-font">
-                    We’re onboarding 3 new clinics this month.
+                    We’re onboarding 3 new med spas this month.
                     <span>After that, waitlist.</span>
                 </h2>
                 <p class="section-desc">
@@ -1184,7 +1186,7 @@
                 <div class="cta-card">
                     <form style="margin:0;">
                         <div class="form-field">
-                            <label class="form-label">Clinic / Business Name</label>
+                            <label class="form-label">Med Spa / Business Name</label>
                             <input class="form-input" type="text" placeholder="Luxe Aesthetics, Beverly MedSpa, etc." />
                         </div>
 
@@ -1229,7 +1231,7 @@
                             SWAE SYSTEMS
                         </div>
                         <div class="footer-copy-sub">
-                            24/7 AI Concierge for Clinics.<br/>
+                            24/7 AI Concierge for Med Spas.<br/>
                             Bilingual intake. Instant reply. Zero attitude.
                         </div>
                     </div>
@@ -1249,11 +1251,11 @@
         </div>
     </footer>
 
-    <!-- MOBILE MENU OVERLAY -->
+    <!-- MOBILE MENU OVERLAY (LUXURY DROPDOWN) -->
     <div id="mobileMenu" class="mobile-menu-overlay">
-        <div class="mobile-menu-panel">
+        <div class="mobile-menu-panel" id="mobileMenuPanel">
 
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:1.3rem;">
                 <div style="display:flex; align-items:center; gap:.5rem;">
                     <div class="brand-mark" style="flex-shrink:0;">SS</div>
                     <div style="line-height:1;">
@@ -1280,13 +1282,13 @@
                 <a href="#contact" style="color:var(--text-main); text-decoration:none;">Contact Team</a>
             </div>
 
-            <div style="border-top:1px solid rgba(255,255,255,0.07); margin-top:1.5rem; padding-top:1.5rem;
+            <div style="border-top:1px solid rgba(255,255,255,0.07); margin-top:1.3rem; padding-top:1.3rem;
                         font-size:.75rem; line-height:1.5; color:var(--text-dim);">
                 We reply to new inquiries in under 5 seconds, 24/7.
                 You wake up to booked consults instead of missed calls.
             </div>
 
-            <div style="margin-top:1.4rem;">
+            <div style="margin-top:1.3rem;">
                 <a class="btn-primary"
                    href="#contact"
                    style="width:100%; display:block; text-align:center; text-decoration:none;">
@@ -1297,8 +1299,8 @@
     </div>
 
     <!-- FLOATING DEMO PILL -->
-    <a href="#demo" class="floating-demo-pill">
-        TRY THE DEMO <span>↗</span>
+    <a href="https://swaesystems.github.io/system-By-Swae/" target="_blank" rel="noopener noreferrer" class="floating-demo-pill">
+        TRY LIVE DEMO <span>↗</span>
     </a>
 
     <!-- SCRIPTS -->
@@ -1320,6 +1322,7 @@
         const openMenuBtn = document.getElementById('openMenu');
         const closeMenuBtn = document.getElementById('closeMenu');
         const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuPanel = document.getElementById('mobileMenuPanel');
 
         function openMobileMenu(){
             if(!mobileMenu || !openMenuBtn) return;
@@ -1334,7 +1337,8 @@
         }
 
         if(openMenuBtn && mobileMenu){
-            openMenuBtn.addEventListener('click', ()=>{
+            openMenuBtn.addEventListener('click', (e)=>{
+                e.stopPropagation();
                 const isVisible = mobileMenu.style.display === 'flex';
                 if(isVisible){
                     closeMobileMenu();
@@ -1345,18 +1349,22 @@
         }
 
         if(closeMenuBtn && mobileMenu){
-            closeMenuBtn.addEventListener('click', closeMobileMenu);
+            closeMenuBtn.addEventListener('click', (e)=>{
+                e.stopPropagation();
+                closeMobileMenu();
+            });
         }
 
-        // close overlay if background clicked
-        if(mobileMenu){
-            mobileMenu.addEventListener('click', (e)=>{
-                if(e.target === mobileMenu){
-                    closeMobileMenu();
-                }
-            });
+        // close when clicking anywhere outside the panel
+        document.addEventListener('click',(e)=>{
+            if(!mobileMenu || mobileMenu.style.display !== 'flex') return;
+            if(mobileMenuPanel && !mobileMenuPanel.contains(e.target) && e.target !== openMenuBtn){
+                closeMobileMenu();
+            }
+        });
 
-            // close when clicking any link in the menu
+        // close when clicking any link in the menu
+        if(mobileMenu){
             mobileMenu.querySelectorAll('a').forEach(link=>{
                 link.addEventListener('click', closeMobileMenu);
             });
