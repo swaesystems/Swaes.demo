@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Redline Transport — Reliable Freight</title>
-<meta name="description" content="Reliable freight capacity with fast dispatch response and clean communication.">
+<title>Red Freight — Reliable Truckload Capacity</title>
+<meta name="description" content="Red Freight provides dependable truckload capacity across core U.S. lanes with fast dispatch response and clean communication.">
 
 <style>
 :root{
@@ -12,7 +12,6 @@
   --black:#0b0b0e;
   --white:#ffffff;
   --gray:#b8bcc6;
-  --panel:#111118;
   --border:rgba(255,255,255,.12);
 }
 
@@ -23,101 +22,55 @@ body{
   background:linear-gradient(180deg,#050507,#0b0b0e);
   color:var(--white);
 }
-
 a{text-decoration:none;color:inherit}
-
-.wrap{
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 20px;
-}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
 /* NAV */
 nav{
-  position:sticky;
-  top:0;
-  z-index:10;
+  position:sticky; top:0; z-index:10;
   background:rgba(5,5,7,.85);
   backdrop-filter:blur(8px);
   border-bottom:1px solid var(--border);
 }
 .navbar{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  display:flex; align-items:center; justify-content:space-between;
   padding:14px 0;
 }
-.brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.logo{
-  width:36px;height:36px;
-  background:var(--red);
-  border-radius:8px;
-}
+.brand{display:flex; align-items:center; gap:12px;}
+.logo{width:36px;height:36px;background:var(--red);border-radius:8px;}
 .brand h1{
-  font-size:14px;
-  margin:0;
-  letter-spacing:.08em;
-  text-transform:uppercase;
+  font-size:14px;margin:0;letter-spacing:.08em;
+  text-transform:uppercase;font-weight:900;
 }
-.brand p{
-  margin:0;
-  font-size:12px;
-  color:var(--gray);
-}
+.brand p{margin:0;font-size:12px;color:var(--gray)}
 .cta{
   background:var(--red);
   padding:10px 18px;
   border-radius:999px;
   font-size:13px;
-  font-weight:700;
+  font-weight:800;
 }
 
 /* HERO */
-.hero{
-  padding:60px 0 40px;
-}
+.hero{padding:60px 0 40px}
 .hero h2{
-  font-size:42px;
-  font-weight:900;
-  text-transform:uppercase;
-  margin:0 0 12px;
+  font-size:42px;font-weight:900;text-transform:uppercase;
+  margin:0 0 12px;line-height:1.08;
 }
 .hero h2 span{color:var(--red)}
-.hero p{
-  color:var(--gray);
-  max-width:640px;
-  line-height:1.6;
-}
-.hero-buttons{
-  display:flex;
-  gap:14px;
-  margin-top:22px;
-}
+.hero p{color:var(--gray);max-width:640px;line-height:1.6}
+.hero-buttons{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
 .btn{
-  padding:12px 20px;
-  border-radius:999px;
+  padding:12px 20px;border-radius:999px;
   border:1px solid var(--border);
-  font-size:13px;
-  font-weight:700;
+  font-size:13px;font-weight:800;
+  background:transparent;
 }
-.btn.red{
-  background:var(--red);
-  border-color:var(--red);
-}
+.btn.red{background:var(--red);border-color:var(--red)}
 
 /* SECTIONS */
-section{
-  padding:36px 0;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:14px;
-}
+section{padding:36px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
 .card{
   background:rgba(255,255,255,.03);
   border:1px solid var(--border);
@@ -125,60 +78,72 @@ section{
   padding:16px;
 }
 .card h3{
-  font-size:12px;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin:0 0 6px;
+  font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;margin:0 0 6px;
 }
-.card p{
-  font-size:13px;
-  color:var(--gray);
-  line-height:1.5;
-}
+.card p{font-size:13px;color:var(--gray);line-height:1.5;margin:0}
 
-/* CHAT BUBBLE */
-#chatHint{
+/* FOOTER */
+footer{
+  border-top:1px solid var(--border);
+  margin-top:14px;
+}
+footer .wrap{padding:20px;color:var(--gray);font-size:12px}
+
+/* ===== Paste hint (next to the Botpress bubble) ===== */
+#pasteHint{
   position:fixed;
-  right:90px;
-  bottom:38px;
-  background:rgba(10,10,14,.9);
-  border:1px solid var(--border);
-  padding:8px 12px;
+  right:88px;
+  bottom:30px;
+  z-index:99998;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
   border-radius:999px;
+  background:rgba(10,10,14,.92);
+  border:1px solid rgba(255,255,255,.14);
+  color:rgba(255,255,255,.92);
   font-size:12px;
-  color:var(--gray);
-  z-index:9998;
+  font-weight:900;
+  letter-spacing:.02em;
+  box-shadow:0 18px 40px rgba(0,0,0,.45);
+  backdrop-filter:blur(10px);
+  user-select:none;
+  cursor:pointer;
 }
-#chatHint strong{color:var(--white)}
+#pasteHint .dot{
+  width:8px;height:8px;border-radius:999px;
+  background:var(--red);
+  box-shadow:0 0 0 4px rgba(225,6,0,.18);
+}
+#pasteHint small{
+  color:var(--gray);
+  font-weight:800;
+  letter-spacing:.01em;
+}
 
-#webchat{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:380px;
-  height:520px;
-  z-index:9999;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 20px 50px rgba(0,0,0,.6);
+/* ===== Style Botpress bubble to match your brand ===== */
+/* Botpress uses a floating action button. We theme it red + round. */
+.bpFab, .bpw-floating-button, .bpw-widget-btn, .bpw-button, .bpw-floating-button__button{
+  border-radius:999px !important;
+}
+.bpFab, .bpw-floating-button, .bpw-floating-button__button{
+  background: linear-gradient(180deg, rgba(225,6,0,.98), rgba(184,5,0,.98)) !important;
+  box-shadow: 0 22px 55px rgba(225,6,0,.28) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
 }
 
 /* MOBILE */
 @media(max-width:520px){
   .hero h2{font-size:30px}
-  #webchat{width:92vw;height:70vh}
-  #chatHint{display:none}
+  #pasteHint{display:none}
 }
 </style>
 
-<!-- BOTPRESS -->
+<!-- ✅ Botpress (bubble version) -->
 <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js" defer></script>
 <script src="https://files.bpcontent.cloud/2026/01/27/19/20260127192744-BK72ZYS6.js" defer></script>
-
-<style>
-/* hide default bp bubble */
-.bpFab{display:none!important}
-</style>
 </head>
 
 <body>
@@ -188,20 +153,20 @@ section{
     <div class="brand">
       <div class="logo"></div>
       <div>
-        <h1>Redline Transport</h1>
-        <p>Reliable freight • fast dispatch • clean communication</p>
+        <h1>Red Freight</h1>
+        <p>Reliable truckload • fast dispatch • clean communication</p>
       </div>
     </div>
-    <a href="#chat" class="cta">Request Capacity</a>
+    <a href="#capacity" class="cta">Request Capacity</a>
   </div>
 </nav>
 
 <div class="wrap hero">
   <h2>Freight that runs <span>on time</span>.</h2>
-  <p>Dependable capacity across core U.S. lanes with rapid load intake and clear dispatch communication.</p>
+  <p>Dependable capacity across core U.S. lanes with quick response and clear dispatch communication.</p>
   <div class="hero-buttons">
-    <a class="btn red" href="#chat">Send a Load</a>
-    <a class="btn" href="#services">View Services</a>
+    <a class="btn red" href="#capacity">Request Capacity</a>
+    <a class="btn" href="#services">Services</a>
   </div>
 </div>
 
@@ -256,19 +221,45 @@ section{
   </div>
 </section>
 
-<!-- CHAT -->
-<div id="chat"></div>
-<div id="chatHint"><strong>Dispatch:</strong> Paste load here</div>
-<div id="webchat"></div>
+<section id="capacity">
+  <div class="wrap">
+    <div class="card">
+      <h3>Request Capacity</h3>
+      <p>Use the dispatch chat (bottom-right) to paste a load and receive a response quickly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Hint next to the bubble -->
+<div id="pasteHint" title="Open chat">
+  <span class="dot"></span>
+  Paste load here!
+  <small>↓</small>
+</div>
 
 <footer>
-  <div class="wrap" style="padding:20px;color:var(--gray);font-size:12px;">
-    © <span id="year"></span> Redline Transport
+  <div class="wrap">
+    © <span id="year"></span> Red Freight. Demo site.
   </div>
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Hide hint after a few seconds, or when user clicks it.
+  const hint = document.getElementById('pasteHint');
+  if (hint){
+    hint.addEventListener('click', () => hint.style.display = 'none');
+    setTimeout(() => { if (hint) hint.style.display = 'none'; }, 7000);
+
+    // Also hide hint if user clicks anywhere near the bubble
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!target) return;
+      const clickedBubble = target.closest?.('.bpFab, .bpw-floating-button, .bpw-floating-button__button, .bpw-widget-btn');
+      if (clickedBubble) hint.style.display = 'none';
+    });
+  }
 </script>
 
 </body>
